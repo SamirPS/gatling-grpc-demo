@@ -14,7 +14,7 @@ import static io.gatling.javaapi.grpc.GrpcDsl.*;
 
 public class GreetingSimulation extends Simulation {
 
-    GrpcProtocolBuilder baseGrpcProtocol = grpc.forAddress("localhost", 50051)
+    GrpcProtocolBuilder baseGrpcProtocol = grpc.forAddress("developments-democrats-managed-kernel.trycloudflare.com", 50051)
             .channelCredentials("#{channelCredentials}")
             .overrideAuthority("gatling-grpc-demo-test-server");
 
