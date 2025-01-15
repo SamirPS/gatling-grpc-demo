@@ -14,10 +14,8 @@ import static io.gatling.javaapi.grpc.GrpcDsl.*;
 
 public class GreetingSimulation extends Simulation {
 
-    GrpcProtocolBuilder baseGrpcProtocol = grpc.forAddress("developments-democrats-managed-kernel.trycloudflare.com", 50051)
-            .channelCredentials("#{channelCredentials}")
-            .overrideAuthority("gatling-grpc-demo-test-server");
-
+    GrpcProtocolBuilder baseGrpcProtocol = grpc.forAddress("mysterious-hilda-gatling-samir-4e9b32e3.koyeb.app", 50051);
+    
     Function<Session, Greeting> greeting = session -> {
         String firstName = session.getString("firstName");
         String lastName = session.getString("lastName");
