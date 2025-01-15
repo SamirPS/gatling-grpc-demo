@@ -1,6 +1,6 @@
-FROM ubuntu:latest
+FROM gradle:jdk21
 COPY . .
 RUN apt update && apt install -y openssl default-jre 
 RUN ./certificates.sh
 WORKDIR server
-ENTRYPOINT [ "./gradlew","-PmainClass=io.gatling.grpc.demo.server.greeting.GreetingServer","run" ]
+ENTRYPOINT [ "gradlew","-PmainClass=io.gatling.grpc.demo.server.greeting.GreetingServer","run" ]
